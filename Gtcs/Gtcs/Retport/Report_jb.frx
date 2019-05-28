@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="03/23/2019 14:45:13" ReportInfo.Modified="03/24/2019 10:47:03" ReportInfo.CreatorVersion="2016.1.0.0" PrintSettings.PrintOnSheetWidth="80">
+  <Dictionary>
+    <MsSqlDataConnection Name="Connection" ConnectionString="rijcmlqZzvg4neKOprPFMcZNdJ1MV9IAK+Gj2q5QmDYJS1CNJNg+A5XuQZwhU1McYhXpdjfs3jW8mL2p7udnKMaNrAiKqVSaJLWHqEFOxyfEYhCY96HiZx04ISI8Kc5ynspF3xpEnYX9ogWYSgb9q2scU24cEuTSDwMi6bApQ3qrsTmIV3QWx/VOt0WwzrZsWTn93zn">
+      <TableDataSource Name="t_cp_yd" DataType="System.Int32" Enabled="true" TableName="t_cp_yd" SelectCommand="SELECT cpmc, qy, je, bc FROM t_cp_yd WHERE(rec_key IN         (SELECT     rec_key  FROM t_pos_bill WHERE bc = @s_bc and pos_date &gt;= @dt_1 and pos_date &lt;@dt_2))">
+        <Column Name="cpmc" DataType="System.String"/>
+        <Column Name="qy" DataType="System.Decimal"/>
+        <Column Name="je" DataType="System.Decimal"/>
+        <Column Name="bc" DataType="System.Byte"/>
+        <CommandParameter Name="dt_1" DataType="22" Expression="[dt_1]"/>
+        <CommandParameter Name="dt_2" DataType="22" Expression="[dt_2]"/>
+        <CommandParameter Name="s_bc" DataType="22" Expression="[s_bc]"/>
+      </TableDataSource>
+    </MsSqlDataConnection>
+    <Parameter Name="s_xm" DataType="System.String"/>
+    <Parameter Name="s_jbdate" DataType="System.String"/>
+    <Parameter Name="s_bc" DataType="System.String"/>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="90" PaperHeight="90" LeftMargin="5" TopMargin="5" RightMargin="5" BottomMargin="5">
+    <ReportTitleBand Name="ReportTitle1" Width="302.4" Height="103.95">
+      <TextObject Name="Text1" Left="85.05" Top="9.45" Width="141.75" Height="18.9" Text="超市交班报表" Font="宋体, 15pt"/>
+      <TextObject Name="Text4" Left="9.45" Top="47.25" Width="85.05" Height="18.9" Text="交班日期：" Font="宋体, 10pt"/>
+      <TextObject Name="Text5" Left="94.5" Top="47.25" Width="122.85" Height="18.9" Text="[s_jbdate]" HorzAlign="Center" Font="宋体, 10pt, style=Bold, Underline"/>
+      <TextObject Name="Text2" Left="9.45" Top="75.6" Width="66.15" Height="18.9" Text="收银员：" Font="宋体, 10pt"/>
+      <TextObject Name="Text3" Left="75.6" Top="75.6" Width="66.15" Height="18.9" Text="[s_xm]" Font="宋体, 10pt, style=Bold, Underline"/>
+      <TextObject Name="Text6" Left="141.75" Top="75.6" Width="56.7" Height="18.9" Text="班次：" Font="宋体, 10pt"/>
+      <TextObject Name="Text7" Left="198.45" Top="75.6" Width="66.15" Height="18.9" Text="[s_bc]" HorzAlign="Center" Font="宋体, 10pt, style=Bold, Underline"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="107.95" Width="302.4" Height="28.35">
+      <TextObject Name="Text8" Left="9.45" Top="9.45" Width="151.2" Height="18.9" Border.Lines="Bottom" Text="商品名称" HorzAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text9" Left="170.1" Top="9.45" Width="56.7" Height="18.9" Border.Lines="Bottom" Text="数量" HorzAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text10" Left="236.25" Top="9.45" Width="56.7" Height="18.9" Border.Lines="Bottom" Text="小计" HorzAlign="Center" Font="宋体, 9pt"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="140.3" Width="302.4" Height="28.35" CanGrow="true" DataSource="t_cp_yd">
+      <TableObject Name="Table1" Left="9.45" Width="283.5" Height="28.35">
+        <TableColumn Name="Column1" Width="157.5"/>
+        <TableColumn Name="Column2" Width="63"/>
+        <TableColumn Name="Column3" Width="63"/>
+        <TableRow Name="Row1" Height="28.35">
+          <TableCell Name="Cell1" Text="[t_cp_yd.cpmc]" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell2" Text="[t_cp_yd.qy]" HorzAlign="Right" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell3" Text="[t_cp_yd.je]" HorzAlign="Right" VertAlign="Center" Font="宋体, 9pt"/>
+        </TableRow>
+      </TableObject>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="172.65" Width="302.4" Height="37.8">
+      <TextObject Name="Text11" Left="28.35" Top="18.9" Width="94.5" Height="18.9" Text="欢迎再次惠顾" Font="宋体, 10pt"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4F341D79-01A0-4749-9AA2-A92D305420BD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gtcs</RootNamespace>
+    <AssemblyName>Gtcs</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FastReport, Version=2019.2.0.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\FastReports\FastReport.Net Trial\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Bars, Version=2019.2.0.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\FastReports\FastReport.Net Trial\FastReport.Bars.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Editor, Version=2019.2.0.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\FastReports\FastReport.Net Trial\FastReport.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Gt.cs" />
+    <Compile Include="Gtsql.cs" />
+    <Compile Include="Gtsqlvip.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="w_Getdh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="w_Getdh.Designer.cs">
+      <DependentUpon>w_Getdh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="w_Getvip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="w_Getvip.Designer.cs">
+      <DependentUpon>w_Getvip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="w_Jb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="w_Jb.Designer.cs">
+      <DependentUpon>w_Jb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="w_Jbreport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="w_Jbreport.Designer.cs">
+      <DependentUpon>w_Jbreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="w_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="w_Login.Designer.cs">
+      <DependentUpon>w_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="w_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="w_Main.Designer.cs">
+      <DependentUpon>w_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="w_Money.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="w_Money.Designer.cs">
+      <DependentUpon>w_Money.cs</DependentUpon>
+    </Compile>
+    <Compile Include="w_Xf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="w_Xf.Designer.cs">
+      <DependentUpon>w_Xf.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="w_Getdh.resx">
+      <DependentUpon>w_Getdh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="w_Getvip.resx">
+      <DependentUpon>w_Getvip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="w_Jb.resx">
+      <DependentUpon>w_Jb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="w_Jbreport.resx">
+      <DependentUpon>w_Jbreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="w_Login.resx">
+      <DependentUpon>w_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="w_Main.resx">
+      <DependentUpon>w_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="w_Money.resx">
+      <DependentUpon>w_Money.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="w_Xf.resx">
+      <DependentUpon>w_Xf.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Program Files %28x86%29\FastReports\FastReport.Net Trial\FastReport.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
